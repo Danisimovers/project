@@ -1,0 +1,34 @@
+<users>
+   <user>
+      <id>f4708272-078b-44a7-a4f3-9a0438c8af01</id>
+      <name>Alice</name>
+      <email>alice@example.com</email>
+      <phoneNumber>111-222-3333</phoneNumber>
+      <role>PARTICIPANT</role>
+      <rating>C</rating>
+   </user>
+   <user>
+      <id>034ddedf-43d8-42b8-a4a9-52fc6bfaa18b</id>
+      <name>Robert</name>
+      <email>robert@example.com</email>
+      <phoneNumber>555-666-7777</phoneNumber>
+      <role>PARTICIPANT</role>
+      <rating>D</rating>
+   </user>
+   <user>
+      <id>7bd960b3-cfa7-4061-8343-f4e0722f95be</id>
+      <name>John Doe</name>
+      <email>john.doe@example.com</email>
+      <phoneNumber>123-456-7890</phoneNumber>
+      <role>ORGANIZER</role>
+      <rating>A</rating>
+   </user>
+   <user>
+      <id>cb5fd04f-443d-4298-a804-4829feeb4127</id>
+      <name>Charlie</name>
+      <email>charlie@example.com</email>
+      <phoneNumber>333-444-5555</phoneNumber>
+      <role>PARTICIPANT</role>
+      <rating>A</rating>
+   </user>
+</users>

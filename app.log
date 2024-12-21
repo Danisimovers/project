@@ -1,0 +1,6 @@
+дек. 16, 2024 5:53:28 PM sfedu.danil.utils.XmlUtil getList
+INFO: Получение списка значений для ключа: item
+дек. 16, 2024 5:53:28 PM sfedu.danil.utils.XmlUtil getDocument
+INFO: Загрузка XML файла из: ./src/main/resources/environment.xml
+дек. 16, 2024 5:53:28 PM sfedu.danil.utils.XmlUtil getDocument
+INFO: Файл успешно загружен

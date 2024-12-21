@@ -1,0 +1,10 @@
+planets:
+  - Earth
+  - Saturn
+  - Mars
+  - Venus
+months:
+  1: Январь
+  2: Февраль
+  3: Март
+  4: Апрель

@@ -1,0 +1,26 @@
+<config>
+    <planets>
+        <item>Earth</item>
+        <item>Saturn</item>
+        <item>Mars</item>
+        <item>Venus</item>
+    </planets>
+    <months>
+        <entry>
+            <key>1</key>
+            <value>January</value>
+        </entry>
+        <entry>
+            <key>2</key>
+            <value>February</value>
+        </entry>
+        <entry>
+            <key>3</key>
+            <value>March</value>
+        </entry>
+        <entry>
+            <key>4</key>
+            <value>April</value>
+        </entry>
+    </months>
+</config>
