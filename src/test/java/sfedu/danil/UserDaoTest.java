@@ -29,10 +29,10 @@ public class UserDaoTest {
 
     @AfterEach
     public void cleanUp() throws SQLException {
-        /*try (Statement statement = connection.createStatement()) {
+        try (Statement statement = connection.createStatement()) {
             statement.executeUpdate("DELETE FROM users");
             statement.executeUpdate("DELETE FROM competitions");
-        }*/
+        }
     }
 
     @Test
@@ -115,7 +115,7 @@ public class UserDaoTest {
 
 
         List<User> users = userDao.getAll();
-        assertEquals(4, users.size());
+        assertEquals(2, users.size());
         assertTrue(users.stream().anyMatch(u -> u.getId().equals(user1.getId()) && u.getCompetitionId().equals(competitionId1)));
         assertTrue(users.stream().anyMatch(u -> u.getId().equals(user2.getId()) && u.getCompetitionId().equals(competitionId2)));
     }

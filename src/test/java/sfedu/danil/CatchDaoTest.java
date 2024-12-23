@@ -31,9 +31,9 @@ public class CatchDaoTest {
 
     @AfterEach
     public void cleanUp() throws SQLException {
-        /*try (Statement statement = connection.createStatement()) {
+        try (Statement statement = connection.createStatement()) {
             statement.executeUpdate("DELETE FROM catches");
-        }*/
+        }
     }
 
     @Test
@@ -125,7 +125,7 @@ public class CatchDaoTest {
         catchDao.create(catch1);
         catchDao.create(catch2);
         List<Catch> catches = catchDao.getAll();
-        assertEquals(4, catches.size());
+        assertEquals(2, catches.size());
         assertTrue(catches.stream().anyMatch(c -> c.getId().equals(catch1.getId())));
         assertTrue(catches.stream().anyMatch(c -> c.getId().equals(catch2.getId())));
     }

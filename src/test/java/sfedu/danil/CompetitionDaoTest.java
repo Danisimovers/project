@@ -26,9 +26,9 @@ public class CompetitionDaoTest {
 
     @AfterEach
     public void cleanUp() throws SQLException {
-        /*try (Statement statement = connection.createStatement()) {
+        try (Statement statement = connection.createStatement()) {
             statement.executeUpdate("DELETE FROM competitions");
-        }*/
+        }
     }
 
     @Test

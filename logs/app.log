@@ -627,3 +627,147 @@
 2024-12-23 15:43:01 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
 2024-12-23 15:43:01 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
 2024-12-23 15:43:01 INFO  CatchDao:114 - Получено 4 записей Catch
+2024-12-23 18:04:20 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:20 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:20 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:20 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:20 INFO  CompetitionDao:29 - Соревнование с id baf3e2c2-807e-478a-942c-bbcdad05d53b успешно добавлено
+2024-12-23 18:04:20 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  UserDao:36 - Пользователь с id 7313fa0d-4bd7-4374-b390-36347ccb20bb успешно добавлен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  UserDao:100 - Пользователь с id 7313fa0d-4bd7-4374-b390-36347ccb20bb успешно удален
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 WARN  UserDao:61 - Пользователь с id 7313fa0d-4bd7-4374-b390-36347ccb20bb не найден
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  CompetitionDao:29 - Соревнование с id 09744516-4eb2-444b-aa25-44f851cd2c53 успешно добавлено
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  UserDao:36 - Пользователь с id 40df59a7-d589-4d07-8adf-231606c9ef3f успешно добавлен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  UserDao:58 - Пользователь с id 40df59a7-d589-4d07-8adf-231606c9ef3f найден
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  CompetitionDao:29 - Соревнование с id d364794f-0d83-4db8-a0fb-3efb19d448b1 успешно добавлено
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  UserDao:36 - Пользователь с id 3e8ac583-35c2-4e94-8669-64084510bc27 успешно добавлен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  UserDao:87 - Пользователь с id 3e8ac583-35c2-4e94-8669-64084510bc27 успешно обновлен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  UserDao:58 - Пользователь с id 3e8ac583-35c2-4e94-8669-64084510bc27 найден
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  CompetitionDao:29 - Соревнование с id 25a83592-fa96-48f1-8843-2ca5ac783d88 успешно добавлено
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:21 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:21 INFO  CompetitionDao:29 - Соревнование с id 23041b19-2e9c-42ec-bfe8-51ab810fab4f успешно добавлено
+2024-12-23 18:04:21 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:22 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:22 INFO  UserDao:36 - Пользователь с id 1d683f08-142d-4e39-8c6b-effc65938da8 успешно добавлен
+2024-12-23 18:04:22 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:22 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:22 INFO  UserDao:36 - Пользователь с id 0b064628-a385-417e-a495-5dce31b6982f успешно добавлен
+2024-12-23 18:04:22 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:22 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:22 INFO  UserDao:124 - Получено 2 пользователей
+2024-12-23 18:04:27 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:27 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:27 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:27 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:27 INFO  CompetitionDao:29 - Соревнование с id 3d76e568-032a-4712-905b-82c3abbebf23 успешно добавлено
+2024-12-23 18:04:27 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:27 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:27 INFO  CompetitionDao:29 - Соревнование с id e2db7adf-e44a-4101-b68f-549a23224d95 успешно добавлено
+2024-12-23 18:04:27 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:27 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:27 INFO  CompetitionDao:115 - Получено 2 соревнований
+2024-12-23 18:04:27 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:27 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:27 INFO  CompetitionDao:29 - Соревнование с id 9b547b68-7ff4-4f27-9937-a34d01ae798d успешно добавлено
+2024-12-23 18:04:27 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:27 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:27 INFO  CompetitionDao:76 - Соревнование с id 9b547b68-7ff4-4f27-9937-a34d01ae798d успешно обновлено
+2024-12-23 18:04:27 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:27 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:27 INFO  CompetitionDao:51 - Соревнование с id 9b547b68-7ff4-4f27-9937-a34d01ae798d найдено
+2024-12-23 18:04:27 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:28 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:28 INFO  CompetitionDao:29 - Соревнование с id d5928d77-094c-4ddd-93f7-c4874fc8f4d3 успешно добавлено
+2024-12-23 18:04:28 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:28 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:28 INFO  CompetitionDao:91 - Соревнование с id d5928d77-094c-4ddd-93f7-c4874fc8f4d3 успешно удалено
+2024-12-23 18:04:28 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:28 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:28 WARN  CompetitionDao:54 - Соревнование с id d5928d77-094c-4ddd-93f7-c4874fc8f4d3 не найдено
+2024-12-23 18:04:28 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:28 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:28 INFO  CompetitionDao:29 - Соревнование с id aba647d0-fbbd-49d6-a94d-fced3f02761e успешно добавлено
+2024-12-23 18:04:28 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:28 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:28 INFO  CompetitionDao:51 - Соревнование с id aba647d0-fbbd-49d6-a94d-fced3f02761e найдено
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 INFO  CompetitionDao:29 - Соревнование с id f00a6b6d-6ba1-4dd3-a354-83177b071272 успешно добавлено
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 INFO  UserDao:36 - Пользователь с id ded311f3-e9aa-48a5-82a0-62d0b2904a97 успешно добавлен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 INFO  CatchDao:30 - Запись Catch с id c8077cae-edba-4af1-b2b2-44b18cc8b591 успешно добавлена
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 INFO  CatchDao:90 - Catch с id c8077cae-edba-4af1-b2b2-44b18cc8b591 успешно удален
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 WARN  CatchDao:56 - Catch с id c8077cae-edba-4af1-b2b2-44b18cc8b591 не найден
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 INFO  CompetitionDao:29 - Соревнование с id 4b458338-731f-4cca-8a8d-3462602d8033 успешно добавлено
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 INFO  UserDao:36 - Пользователь с id 405a885c-7a1c-43f4-8eaf-09d0310896a4 успешно добавлен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 INFO  CatchDao:30 - Запись Catch с id d75673cc-55c6-46c4-9d9a-3943dafc822b успешно добавлена
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 INFO  CatchDao:53 - Catch с id d75673cc-55c6-46c4-9d9a-3943dafc822b найден
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:35 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:35 INFO  CompetitionDao:29 - Соревнование с id 4a22aee0-d08c-4a63-a573-0100664e8d9c успешно добавлено
+2024-12-23 18:04:35 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:36 INFO  UserDao:36 - Пользователь с id 5ef563e8-d9b2-4eb2-ac16-747432493ea1 успешно добавлен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:36 INFO  CatchDao:30 - Запись Catch с id 9e810f9c-8e91-4f3b-86ef-ec784eae939e успешно добавлена
+2024-12-23 18:04:36 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:36 INFO  CatchDao:77 - Catch с id 9e810f9c-8e91-4f3b-86ef-ec784eae939e успешно обновлен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:36 INFO  CatchDao:53 - Catch с id 9e810f9c-8e91-4f3b-86ef-ec784eae939e найден
+2024-12-23 18:04:36 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:36 INFO  CompetitionDao:29 - Соревнование с id 3395a64a-5cbd-420c-a9a1-50f37c7bac63 успешно добавлено
+2024-12-23 18:04:36 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:36 INFO  UserDao:36 - Пользователь с id 555430a3-eae4-4021-9e9b-c8088e8bfc84 успешно добавлен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:36 INFO  CatchDao:30 - Запись Catch с id d7d599f8-a89b-415b-a434-6251630efb54 успешно добавлена
+2024-12-23 18:04:36 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:36 INFO  CatchDao:30 - Запись Catch с id 24c6de1b-c462-4c0d-b3ce-20aff65fedea успешно добавлена
+2024-12-23 18:04:36 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-23 18:04:36 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-23 18:04:36 INFO  CatchDao:114 - Получено 2 записей Catch
