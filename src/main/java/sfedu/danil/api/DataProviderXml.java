@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.simpleframework.xml.*;
 import org.simpleframework.xml.core.Persister;
 import sfedu.danil.models.User;
+import sfedu.danil.models.Users;
 
 import java.io.*;
 import java.util.*;
@@ -117,20 +118,4 @@ public class DataProviderXml implements IDataProvider<User> {
             logger.error("Ошибка при обновлении записи в XML", e);
         }
     }
-}
-
-@Root
-class Users {
-    @ElementList(inline = true)
-    private List<User> userList;
-
-    public List<User> getUserList() {
-        return userList;
-    }
-
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
-    }
-
-
 }

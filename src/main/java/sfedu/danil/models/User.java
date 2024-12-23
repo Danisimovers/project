@@ -25,29 +25,19 @@ public class User {
     private Role role;
     @Element
     private String rating;
+    @Element(required = false)
+    private String competitionId;
 
-    public User(String name, String email, String phoneNumber, Role role, String rating) {
+    public User(String name, String email, String phoneNumber, Role role, String rating, String competitionId) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.role = role;
         this.rating = rating;
+        this.competitionId = competitionId;
     }
 
     public User() {
     }
-
-    /*@Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", role=" + role +
-                ", rating='" + rating + '\'' +
-                '}';
-    }*/
-
 }

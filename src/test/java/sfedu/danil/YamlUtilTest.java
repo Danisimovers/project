@@ -10,11 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class YamlUtilTest {
 
-    private static final String ENV_FILE_PATH = "environment.yaml";
 
     @Test
     void testLoadYaml() throws IOException {
-        Map<String, Object> yamlData = YamlUtil.loadYaml(ENV_FILE_PATH);
+        Map<String, Object> yamlData = YamlUtil.loadYaml(Constants.YAML_CONFIG_PATH);
 
         assertNotNull(yamlData, "Данные YAML не должны быть null");
         assertTrue(yamlData.containsKey("planets"), "Файл должен содержать ключ 'planets'");
@@ -23,7 +22,7 @@ public class YamlUtilTest {
 
     @Test
     void testLoadYamlPlanets() throws IOException {
-        Map<String, Object> yamlData = YamlUtil.loadYaml(ENV_FILE_PATH);
+        Map<String, Object> yamlData = YamlUtil.loadYaml(Constants.YAML_CONFIG_PATH);
         List<String> planets = (List<String>) yamlData.get("planets");
 
         assertNotNull(planets, "Список 'planets' не должен быть null");
@@ -34,7 +33,7 @@ public class YamlUtilTest {
 
     @Test
     void testLoadYamlMonths() throws IOException {
-        Map<String, Object> yamlData = YamlUtil.loadYaml(ENV_FILE_PATH);
+        Map<String, Object> yamlData = YamlUtil.loadYaml(Constants.YAML_CONFIG_PATH);
         Map<String, String> months = (Map<String, String>) yamlData.get("months");
 
         assertNotNull(months, "Карта 'months' не должна быть null");

@@ -14,28 +14,21 @@ import java.util.Properties;
  */
 public class ConfigurationUtil {
 
-    private static final String DEFAULT_CONFIG_PATH = "./src/main/resources/enviroment.properties";
     private static final Properties configuration = new Properties();
-    /**
-     * Hides default constructor
-     */
+
     public ConfigurationUtil() {
     }
-    
-    private static Properties getConfiguration() throws IOException {
+
+    private static Properties getConfiguration(String filePath) throws IOException {
         if(configuration.isEmpty()){
-            loadConfiguration();
+            loadConfiguration(filePath);
         }
         return configuration;
     }
 
-    /**
-     * Loads configuration from <code>DEFAULT_CONFIG_PATH</code>
-     * @throws IOException In case of the configuration file read failure
-     */
-    private static void loadConfiguration() throws IOException{
-        File nf = new File(DEFAULT_CONFIG_PATH);
-        InputStream in = new FileInputStream(nf);// DEFAULT_CONFIG_PATH.getClass().getResourceAsStream(DEFAULT_CONFIG_PATH);
+    private static void loadConfiguration(String filePath) throws IOException{
+        File nf = new File(filePath);
+        InputStream in = new FileInputStream(nf);
         try {
             configuration.load(in);
         } catch (IOException ex) {
@@ -44,14 +37,9 @@ public class ConfigurationUtil {
             in.close();
         }
     }
-    /**
-     * Gets configuration entry value
-     * @param key Entry key
-     * @return Entry value by key
-     * @throws IOException In case of the configuration file read failure
-     */
-    public static String getConfigurationEntry(String key) throws IOException{
-        return getConfiguration().getProperty(key);
+
+    public static String getConfigurationEntry(String key, String filePath) throws IOException{
+        return getConfiguration(filePath).getProperty(key);
     }
-    
 }
+

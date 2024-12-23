@@ -28,7 +28,7 @@ public class MongoDBConnector {
         try {
             Document document = new Document()
                     .append("className", content.getClassName())
-                    .append("createdDate", content.getCreatedDate().toString()) // Конвертируем LocalDateTime в String
+                    .append("createdDate", content.getCreatedDate().toString())
                     .append("actor", content.getActor())
                     .append("methodName", content.getMethodName())
                     .append("object", content.getObject())

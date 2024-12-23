@@ -12,7 +12,7 @@ class FishMatchClientTest {
 
     public void logBasicSystemInfo() {
         log.info("Launching the application...");
-        log.info("Operating System: " + System.getProperty("os.name") + " " + System.getProperty("os.version"));
+        log.info("Operating System: " + System.getProperty("os.fishType") + " " + System.getProperty("os.version"));
         log.info("JRE: " + System.getProperty("java.version"));
         log.info("Java Launched From: " + System.getProperty("java.home"));
         log.info("Class Path: " + System.getProperty("java.class.path"));

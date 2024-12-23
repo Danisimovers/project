@@ -10,7 +10,6 @@ import sfedu.danil.models.User;
 import java.io.*;
 import java.util.*;
 
-
 public class DataProviderCsv implements IDataProvider<User> {
 
     Logger logger = LogManager.getLogger(DataProviderCsv.class);
@@ -23,26 +22,25 @@ public class DataProviderCsv implements IDataProvider<User> {
         this.userList = new ArrayList<>();
         initDataSource();
     }
-
+    //NUll обработка изменить!
     @Override
     public void initDataSource() {
         try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
             List<String[]> csvData = reader.readAll();
-            if (userList == null) {
-                userList = new ArrayList<>();
-            }
+            userList = Optional.ofNullable(userList).orElseGet(ArrayList::new);
             for (String[] row : csvData) {
-                // Преобразуем строку из CSV в объект User
                 String id = row[0];
                 String name = row[1];
                 String email = row[2];
                 String phoneNumber = row[3];
-                Role role = Role.valueOf(row[4]);  // Преобразуем строку в роль
+                Role role = Role.valueOf(row[4]);
                 String rating = row[5];
+                Optional<String> competitionId = row.length > 6 ? Optional.ofNullable(row[6]) : Optional.empty();
 
-                User user = new User(name, email, phoneNumber, role, rating);
+                User user = new User(name, email, phoneNumber, role, rating, competitionId.orElse(null));
                 user.setId(id);
                 userList.add(user);
+
             }
             logger.info("Успешно инициализированы данные из CSV: {} записей", userList.size());
         } catch (IOException e) {
@@ -54,8 +52,6 @@ public class DataProviderCsv implements IDataProvider<User> {
         }
     }
 
-
-
     @Override
     public void saveRecord(User record) {
         try (CSVWriter writer = new CSVWriter(new FileWriter(csvFilePath, true))) {
@@ -65,7 +61,8 @@ public class DataProviderCsv implements IDataProvider<User> {
                     record.getEmail(),
                     record.getPhoneNumber(),
                     record.getRole().toString(),
-                    record.getRating()
+                    record.getRating(),
+                    record.getCompetitionId()
             };
             writer.writeNext(values);
             if (userList == null) {
@@ -90,7 +87,8 @@ public class DataProviderCsv implements IDataProvider<User> {
                             user.getEmail(),
                             user.getPhoneNumber(),
                             user.getRole().toString(),
-                            user.getRating()
+                            user.getRating(),
+                            user.getCompetitionId()
                     };
                     writer.writeNext(values);
                 }
@@ -115,16 +113,13 @@ public class DataProviderCsv implements IDataProvider<User> {
         throw new NoSuchElementException("Запись с ID " + id + " не найдена.");
     }
 
-
-
     @Override
     public void updateRecord(User record) {
         boolean isUpdated = false;
 
-        // Находим индекс пользователя в списке и обновляем его
         for (int i = 0; i < userList.size(); i++) {
             if (userList.get(i).getId().equals(record.getId())) {
-                userList.set(i, record); // Обновляем запись в списке
+                userList.set(i, record);
                 isUpdated = true;
                 break;
             }
@@ -133,6 +128,7 @@ public class DataProviderCsv implements IDataProvider<User> {
             logger.error("Запись с ID {} не найдена для обновления.", record.getId());
             throw new NoSuchElementException("Запись с ID " + record.getId() + " не найдена для обновления.");
         }
+
         try (CSVWriter writer = new CSVWriter(new FileWriter(csvFilePath))) {
             for (User user : userList) {
                 String[] values = {
@@ -141,7 +137,8 @@ public class DataProviderCsv implements IDataProvider<User> {
                         user.getEmail(),
                         user.getPhoneNumber(),
                         user.getRole().toString(),
-                        user.getRating()
+                        user.getRating(),
+                        user.getCompetitionId()
                 };
                 writer.writeNext(values);
             }
@@ -150,6 +147,4 @@ public class DataProviderCsv implements IDataProvider<User> {
             logger.error("Ошибка при обновлении записи в CSV", e);
         }
     }
-
 }
-
