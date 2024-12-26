@@ -33,6 +33,8 @@ public class CatchDaoTest {
     public void cleanUp() throws SQLException {
         try (Statement statement = connection.createStatement()) {
             statement.executeUpdate("DELETE FROM catches");
+            statement.executeUpdate("DELETE FROM competitions");
+            statement.executeUpdate("DELETE FROM users");
         }
     }
 

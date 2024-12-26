@@ -65,12 +65,19 @@ public class CatchDao implements BaseDao<Catch> {
 
     @Override
     public void update(Catch catchEntry) throws SQLException {
+        Optional<String> currentCompetitionIdOpt = getCurrentCompetitionId(catchEntry.getId());
+
+        String competitionIdToUpdate = Optional.ofNullable(catchEntry.getCompetitionId())
+                .filter(id -> !id.isEmpty())
+                .or(() -> currentCompetitionIdOpt) // Если новое значение отсутствует, берем текущее из базы
+                .orElseThrow(() -> new IllegalStateException("Не удалось определить competitionId для обновления"));
+
         try (Connection connection = PsqlDBConnection.getConnection();
-         PreparedStatement statement = connection.prepareStatement(Constants.UPD_CATCH_QUERY)) {
+             PreparedStatement statement = connection.prepareStatement(Constants.UPD_CATCH_QUERY)) {
             statement.setDouble(1, catchEntry.getWeight());
             statement.setDouble(2, catchEntry.getPoints());
             statement.setString(3, catchEntry.getUserId());
-            statement.setString(4, catchEntry.getCompetitionId());
+            statement.setString(4, competitionIdToUpdate);
             statement.setString(5, catchEntry.getFishType());
             statement.setString(6, catchEntry.getId());
             statement.executeUpdate();
@@ -80,6 +87,23 @@ public class CatchDao implements BaseDao<Catch> {
             throw new RuntimeException(e);
         }
     }
+
+    // Метод для получения текущего competitionId по id записи Catch
+    private Optional<String> getCurrentCompetitionId(String catchId) throws SQLException {
+        try (Connection connection = PsqlDBConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(Constants.RDCUR_COMP_ID)) {
+            statement.setString(1, catchId);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    return Optional.ofNullable(resultSet.getString("competition_id"));
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return Optional.empty();
+    }
+
 
     @Override
     public void delete(String id) throws SQLException {

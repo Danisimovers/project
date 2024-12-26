@@ -15,9 +15,5 @@ public class FishMatchClient {
     FishMatchClient() {
         log.debug("FishMatchClient: starting application...");
     }
-
-    public static void main(String[] args) throws IOException {
-
-    }
 }
 

@@ -5,9 +5,9 @@ import org.simpleframework.xml.Root;
 
 import java.util.List;
 
-@Root
+
 public class Users {
-    @ElementList(inline = true)
+
     private List<User> userList;
 
     public List<User> getUserList() {

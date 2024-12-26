@@ -11,21 +11,21 @@ import java.util.UUID;
 @Getter
 @Setter
 
-@Root
+
 public class User {
-    @Element
+
     private String id;
-    @Element
+
     private String name;
-    @Element
+
     private String email;
-    @Element
+
     private String phoneNumber;
-    @Element
+
     private Role role;
-    @Element
+
     private String rating;
-    @Element(required = false)
+
     private String competitionId;
 
     public User(String name, String email, String phoneNumber, Role role, String rating, String competitionId) {
@@ -40,4 +40,13 @@ public class User {
 
     public User() {
     }
+
+    @Override
+    public String toString() {
+        return "User{id=" + id + ", name='" + name + "', email='" + email + "', phoneNumber='" + phoneNumber +
+                "', role='" + role + "', rating=" + rating + ", competitionId=" + competitionId + "}";
+    }
+
+
+
 }

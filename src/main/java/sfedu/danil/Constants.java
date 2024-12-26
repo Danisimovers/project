@@ -34,6 +34,7 @@ public class Constants {
     public static final String READ_CATCH_QUERY = "SELECT * FROM catches WHERE id = ?";
     public static final String UPD_CATCH_QUERY = "UPDATE catches SET weight = ?, points = ?, user_id = ?, competition_id = ?, fish_type = ?, updated_at = CURRENT_TIMESTAMP " +
             "WHERE id = ?";
+    public static final String RDCUR_COMP_ID = "SELECT competition_id FROM catches WHERE id = ?";
     public static final String DEL_CATCH_QUERY = "DELETE FROM catches WHERE id = ?";
     public static final String RDALL_CATCH_QUERY = "SELECT * FROM catches";
 }

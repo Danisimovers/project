@@ -26,4 +26,16 @@ public class Catch {
 
     public Catch() {
     }
+
+    @Override
+    public String toString() {
+        return "Catch{" +
+                "id=" + id + '\'' +
+                ", fishType='" + fishType + '\'' +
+                ", weight=" + weight +
+                ", points=" + points +
+                ", userId='" + userId + '\'' +
+                ", competitionId='" + competitionId + '\'' +
+                '}';
+    }
 }

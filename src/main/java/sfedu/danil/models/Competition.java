@@ -22,4 +22,13 @@ public class Competition {
     }
     public Competition() {
     }
+
+    @Override
+    public String toString() {
+        return "Competition{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", date=" + date +
+                '}';
+    }
 }
