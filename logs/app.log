@@ -1922,3 +1922,27 @@ Message: Premature end of file.
 2024-12-26 12:48:53 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
 2024-12-26 12:48:53 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
 2024-12-26 12:48:53 INFO  CompetitionDao:115 - Получено 1 соревнований
+2024-12-26 13:50:34 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-26 13:50:34 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-26 13:50:34 INFO  CompetitionDao:115 - Получено 1 соревнований
+2024-12-27 14:56:42 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-27 14:56:43 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-27 14:56:43 INFO  CompetitionDao:115 - Получено 1 соревнований
+2024-12-27 14:56:52 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-27 14:56:52 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-27 14:56:52 INFO  UserDao:124 - Получено 0 пользователей
+2024-12-27 14:57:41 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-27 14:57:42 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-27 14:57:42 INFO  UserDao:36 - Пользователь с id 3daa4335-6de6-4049-971e-cff6e51ab5b9 успешно добавлен
+2024-12-27 14:58:09 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-27 14:58:09 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-27 14:58:09 INFO  UserDao:58 - Пользователь с id 3daa4335-6de6-4049-971e-cff6e51ab5b9 найден
+2024-12-27 14:58:36 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-27 14:58:36 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-27 14:58:36 INFO  CatchDao:138 - Получено 0 записей Catch
+2024-12-27 14:59:14 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-27 14:59:14 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-27 14:59:14 INFO  CatchDao:30 - Запись Catch с id 5c94c86e-b069-4405-ac4e-8e8478f37442 успешно добавлена
+2024-12-27 14:59:18 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2024-12-27 14:59:18 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2024-12-27 14:59:18 INFO  CatchDao:138 - Получено 1 записей Catch

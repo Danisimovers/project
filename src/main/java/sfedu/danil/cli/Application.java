@@ -23,12 +23,12 @@ public class Application {
         boolean running = true;
 
         while (running) {
-            System.out.println("\n=== Main Menu ===");
-            System.out.println("1. Manage Competitions");
-            System.out.println("2. Manage Users");
-            System.out.println("3. Manage Catches");
-            System.out.println("4. Exit");
-            System.out.print("Choose an option: ");
+            System.out.println("\n=== Главное меню ===");
+            System.out.println("1. Управление соревнованиями");
+            System.out.println("2. Управление пользователями");
+            System.out.println("3. Управление уловами");
+            System.out.println("4. Выйти");
+            System.out.print("Выберите опцию: ");
 
             String choice = scanner.nextLine();
 
@@ -46,7 +46,7 @@ public class Application {
                     running = false;
                     break;
                 default:
-                    System.out.println("Invalid option. Try again.");
+                    System.out.println("Неверный выбор. Попробуйте снова.");
             }
         }
 
@@ -57,14 +57,14 @@ public class Application {
         boolean catchRunning = true;
 
         while (catchRunning) {
-            System.out.println("\n=== Catch Menu ===");
-            System.out.println("1. Create Catch");
-            System.out.println("2. Read Catch");
-            System.out.println("3. Update Catch");
-            System.out.println("4. Delete Catch");
-            System.out.println("5. Get All Catches");
-            System.out.println("6. Back to Main Menu");
-            System.out.print("Choose an option: ");
+            System.out.println("\n=== Меню Улов ===");
+            System.out.println("1. Создать улов");
+            System.out.println("2. Просмотреть улов");
+            System.out.println("3. Обновить улов");
+            System.out.println("4. Удалить улов");
+            System.out.println("5. Посмотреть все уловы");
+            System.out.println("6. Вернуться в главное меню");
+            System.out.print("Выберите опцию: ");
 
             String choice = scanner.nextLine();
 
@@ -88,7 +88,7 @@ public class Application {
                     catchRunning = false;
                     break;
                 default:
-                    System.out.println("Invalid option. Try again.");
+                    System.out.println("Неверный выбор. Попробуйте снова.");
             }
         }
     }
@@ -98,14 +98,14 @@ public class Application {
         boolean userRunning = true;
 
         while (userRunning) {
-            System.out.println("\n=== User Menu ===");
-            System.out.println("1. Create User");
-            System.out.println("2. Read User");
-            System.out.println("3. Update User");
-            System.out.println("4. Delete User");
-            System.out.println("5. Get All Users");
-            System.out.println("6. Back to Main Menu");
-            System.out.print("Choose an option: ");
+            System.out.println("\n=== Меню пользователей ===");
+            System.out.println("1. Создать пользователя");
+            System.out.println("2. Просмотреть пользователя");
+            System.out.println("3. Обновить пользователя");
+            System.out.println("4. Удалить пользователя");
+            System.out.println("5. Посмотреть всех пользователей");
+            System.out.println("6. Вернуться в главное меню");
+            System.out.print("Выберите опцию: ");
 
             String choice = scanner.nextLine();
 
@@ -129,7 +129,7 @@ public class Application {
                     userRunning = false;
                     break;
                 default:
-                    System.out.println("Invalid option. Try again.");
+                    System.out.println("Неверный выбор. Попробуйте снова.");
             }
         }
     }
@@ -138,14 +138,14 @@ public class Application {
         boolean competitionRunning = true;
 
         while (competitionRunning) {
-            System.out.println("\n=== Competition Menu ===");
-            System.out.println("1. Create Competition");
-            System.out.println("2. Read Competition");
-            System.out.println("3. Update Competition");
-            System.out.println("4. Delete Competition");
-            System.out.println("5. Get All Competitions");
-            System.out.println("6. Back to Main Menu");
-            System.out.print("Choose an option: ");
+            System.out.println("\n=== Меню соревнований ===");
+            System.out.println("1. Создать соревнование");
+            System.out.println("2. Просмотреть соревнование");
+            System.out.println("3. Обновить соревнование");
+            System.out.println("4. Удалить соревнование");
+            System.out.println("5. Посмотреть все соревнования");
+            System.out.println("6. Вернуться в главное меню");
+            System.out.print("Выберите опцию: ");
 
             String choice = scanner.nextLine();
 
@@ -169,292 +169,296 @@ public class Application {
                     competitionRunning = false;
                     break;
                 default:
-                    System.out.println("Invalid option. Try again.");
+                    System.out.println("Неверный выбор. Попробуйте снова.");
             }
         }
     }
 
     private static void createUser(Scanner scanner) {
         try {
-            System.out.println("\n--- Create User ---");
-            System.out.print("Name: ");
+            System.out.println("\n--- Создание пользователя ---");
+            System.out.print("Имя: ");
             String name = scanner.nextLine();
-            System.out.print("Email: ");
+            System.out.print("Электронная почта: ");
             String email = scanner.nextLine();
-            System.out.print("Phone Number: ");
+            System.out.print("Номер телефона: ");
             String phoneNumber = scanner.nextLine();
-            System.out.print("Role (ORGANIZER/PARTICIPANT): ");
+            System.out.print("Роль (ORGANIZER/PARTICIPANT): ");
             Role role = Role.valueOf(scanner.nextLine().toUpperCase());
-            System.out.print("Rating (0.00 - 9.99): ");
+            System.out.print("Рейтинг (0.00 - 9.99): ");
             String rating = scanner.nextLine();
-            System.out.print("Competition ID: ");
+            System.out.print("ID соревнования: ");
             String competitionId = scanner.nextLine();
             if (competitionId.isEmpty()) competitionId = null;
 
             User user = new User(name, email, phoneNumber, role, rating, competitionId);
             userDao.create(user);
-            System.out.println("User created successfully!");
+            System.out.println("Пользователь успешно создан!");
         } catch (Exception e) {
-            System.out.println("Error creating user: " + e.getMessage());
+            System.out.println("Ошибка при создании пользователя: " + e.getMessage());
         }
     }
 
     private static void readUser(Scanner scanner) {
         try {
-            System.out.println("\n--- Read User ---");
-            System.out.print("Enter User ID: ");
+            System.out.println("\n--- Просмотр данных пользователя ---");
+            System.out.print("Введите ID пользователя: ");
             String id = scanner.nextLine();
 
             userDao.read(id).ifPresentOrElse(
-                    user -> System.out.println("User found: " + user),
-                    () -> System.out.println("User not found.")
+                    user -> System.out.println("Пользователь найден: " + user),
+                    () -> System.out.println("Пользователь не найден.")
             );
         } catch (Exception e) {
-            System.out.println("Error reading user: " + e.getMessage());
+            System.out.println("Ошибка при чтении данных пользователя: " + e.getMessage());
         }
     }
 
     private static void updateUser(Scanner scanner) {
         try {
-            System.out.println("\n--- Update User ---");
-            System.out.print("Enter User ID: ");
+            System.out.println("\n--- Обновление данных пользователя ---");
+            System.out.print("Введите ID пользователя: ");
             String id = scanner.nextLine();
 
             userDao.read(id).ifPresentOrElse(user -> {
                 try {
-                    System.out.print("New Name (current: " + user.getName() + "): ");
+                    System.out.print("Новое имя (текущее: " + user.getName() + "): ");
                     String name = scanner.nextLine();
                     if (!name.isEmpty()) user.setName(name);
 
-                    System.out.print("New Email (current: " + user.getEmail() + "): ");
+                    System.out.print("Новый Email (текущий: " + user.getEmail() + "): ");
                     String email = scanner.nextLine();
                     if (!email.isEmpty()) user.setEmail(email);
 
-                    System.out.print("New Phone Number (current: " + user.getPhoneNumber() + "): ");
+                    System.out.print("Новый номер телефона (текущий: " + user.getPhoneNumber() + "): ");
                     String phoneNumber = scanner.nextLine();
                     if (!phoneNumber.isEmpty()) user.setPhoneNumber(phoneNumber);
 
-                    System.out.print("New Role (current: " + user.getRole() + "): ");
+                    System.out.print("Новая роль (текущая: " + user.getRole() + "): ");
                     String role = scanner.nextLine();
                     if (!role.isEmpty()) user.setRole(Role.valueOf(role.toUpperCase()));
 
-                    System.out.print("New Rating (current: " + user.getRating() + "): ");
+                    System.out.print("Новый рейтинг (текущий: " + user.getRating() + "): ");
                     String rating = scanner.nextLine();
                     if (!rating.isEmpty()) user.setRating(rating);
 
-                    System.out.print("New Competition ID (current: " + user.getCompetitionId() + "): ");
+                    System.out.print("Новый ID соревнования (текущий: " + user.getCompetitionId() + "): ");
                     String competitionId = scanner.nextLine();
                     user.setCompetitionId(competitionId.isEmpty() ? null : competitionId);
 
                     userDao.update(user);
-                    System.out.println("User updated successfully!");
+                    System.out.println("Данные пользователя успешно обновлены!");
                 } catch (Exception e) {
-                    System.out.println("Error updating user: " + e.getMessage());
+                    System.out.println("Ошибка при обновлении данных пользователя: " + e.getMessage());
                 }
-            }, () -> System.out.println("User not found."));
+            }, () -> System.out.println("Пользователь не найден."));
         } catch (Exception e) {
-            System.out.println("Error reading user: " + e.getMessage());
+            System.out.println("Ошибка при чтении данных пользователя: " + e.getMessage());
         }
     }
 
     private static void deleteUser(Scanner scanner) {
         try {
-            System.out.println("\n--- Delete User ---");
-            System.out.print("Enter User ID: ");
+            System.out.println("\n--- Удаление пользователя ---");
+            System.out.print("Введите ID пользователя: ");
             String id = scanner.nextLine();
             userDao.delete(id);
-            System.out.println("User deleted successfully!");
+            System.out.println("Пользователь успешно удалён!");
         } catch (Exception e) {
-            System.out.println("Error deleting user: " + e.getMessage());
+            System.out.println("Ошибка при удалении пользователя: " + e.getMessage());
         }
     }
 
     private static void getAllUsers() {
         try {
-            System.out.println("\n--- All Users ---");
+            System.out.println("\n--- Все пользователи ---");
             userDao.getAll().forEach(System.out::println);
         } catch (Exception e) {
-            System.out.println("Error fetching users: " + e.getMessage());
+            System.out.println("Ошибка при получении списка пользователей: " + e.getMessage());
         }
     }
 
     private static void createCompetition(Scanner scanner) {
         try {
-            System.out.println("\n--- Create Competition ---");
-            System.out.print("Competition Name: ");
+            System.out.println("\n--- Создание соревнования ---");
+            System.out.print("Название соревнования: ");
             String name = scanner.nextLine();
-            System.out.print("Competition Date (yyyy-MM-dd HH:mm): ");
+            System.out.print("Дата соревнования (гггг-мм-дд чч:мм): ");
             String dateInput = scanner.nextLine();
-
-            // Парсинг строки в LocalDateTime
             LocalDateTime date = LocalDateTime.parse(dateInput, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
-
             Competition competition = new Competition(name, date);
             competitionDao.create(competition);
-            System.out.println("Competition created successfully!");
+            System.out.println("Соревнование успешно создано!");
         } catch (Exception e) {
-            System.out.println("Error creating competition: " + e.getMessage());
+            System.out.println("Ошибка при создании соревнования: " + e.getMessage());
         }
     }
 
 
     private static void readCompetition(Scanner scanner) {
         try {
-            System.out.println("\n--- Read Competition ---");
-            System.out.print("Enter Competition ID: ");
+            System.out.println("\n--- Просмотр данных соревнования ---");
+            System.out.print("Введите ID соревнования: ");
             String id = scanner.nextLine();
 
             competitionDao.read(id).ifPresentOrElse(
-                    competition -> System.out.println("Competition found: " + competition),
-                    () -> System.out.println("Competition not found.")
+                    competition -> System.out.println("Соревнование найдено: " + competition),
+                    () -> System.out.println("Соревнование не найдено.")
             );
         } catch (Exception e) {
-            System.out.println("Error reading competition: " + e.getMessage());
+            System.out.println("Ошибка при чтении данных соревнования: " + e.getMessage());
         }
     }
 
+
     private static void updateCompetition(Scanner scanner) {
         try {
-            System.out.println("\n--- Update Competition ---");
-            System.out.print("Enter Competition ID: ");
+            System.out.println("\n--- Обновить данные соревнования ---");
+            System.out.print("Введите ID соревнования: ");
             String id = scanner.nextLine();
 
             competitionDao.read(id).ifPresentOrElse(competition -> {
                 try {
-                    System.out.print("New Name (current: " + competition.getName() + "): ");
+                    System.out.print("Новое название (текущее: " + competition.getName() + "): ");
                     String name = scanner.nextLine();
                     if (!name.isEmpty()) competition.setName(name);
 
-                    System.out.print("New Date (current: " + competition.getDate() + "): ");
+                    System.out.print("Новая дата (текущая: " + competition.getDate() + "): ");
                     String dateStr = scanner.nextLine();
                     if (!dateStr.isEmpty()) competition.setDate(LocalDateTime.parse(dateStr));
 
                     competitionDao.update(competition);
-                    System.out.println("Competition updated successfully!");
+                    System.out.println("Данные соревнования обновлены успешно!");
                 } catch (Exception e) {
-                    System.out.println("Error updating competition: " + e.getMessage());
+                    System.out.println("Ошибка при обновлении данных соревнования: " + e.getMessage());
                 }
-            }, () -> System.out.println("Competition not found."));
+            }, () -> System.out.println("Соревнование не найдено."));
         } catch (Exception e) {
-            System.out.println("Error reading competition: " + e.getMessage());
+            System.out.println("Ошибка при чтении данных соревнования: " + e.getMessage());
         }
     }
+
 
     private static void deleteCompetition(Scanner scanner) {
         try {
-            System.out.println("\n--- Delete Competition ---");
-            System.out.print("Enter Competition ID: ");
+            System.out.println("\n--- Удалить соревнование ---");
+            System.out.print("Введите ID соревнования: ");
             String id = scanner.nextLine();
             competitionDao.delete(id);
-            System.out.println("Competition deleted successfully!");
+            System.out.println("Соревнование удалено успешно!");
         } catch (Exception e) {
-            System.out.println("Error deleting competition: " + e.getMessage());
+            System.out.println("Ошибка при удалении соревнования: " + e.getMessage());
         }
     }
+
 
     private static void getAllCompetitions() {
         try {
-            System.out.println("\n--- All Competitions ---");
+            System.out.println("\n--- Все соревнования ---");
             competitionDao.getAll().forEach(System.out::println);
         } catch (Exception e) {
-            System.out.println("Error fetching competitions: " + e.getMessage());
+            System.out.println("Ошибка при получении списка соревнований: " + e.getMessage());
         }
     }
 
+
     private static void createCatch(Scanner scanner) {
         try {
-            System.out.println("\n--- Create Catch ---");
-            System.out.print("Fish Type: ");
+            System.out.println("\n--- Создать улов ---");
+            System.out.print("Вид рыбы: ");
             String fishType = scanner.nextLine();
-            System.out.print("Weight: ");
+            System.out.print("Вес: ");
             double weight = Double.parseDouble(scanner.nextLine());
-            System.out.print("Points: ");
+            System.out.print("Очки: ");
             double points = Double.parseDouble(scanner.nextLine());
-            System.out.print("User ID: ");
+            System.out.print("ID пользователя: ");
             String userId = scanner.nextLine();
-            System.out.print("Competition ID: ");
+            System.out.print("ID соревнования: ");
             String competitionId = scanner.nextLine();
 
             Catch catchEntry = new Catch(fishType, weight, points, userId, competitionId);
             catchDao.create(catchEntry);
-            System.out.println("Catch created successfully!");
+            System.out.println("Улов успешно создан!");
         } catch (Exception e) {
-            System.out.println("Error creating catch: " + e.getMessage());
+            System.out.println("Ошибка при создании улова: " + e.getMessage());
         }
     }
+
 
     private static void readCatch(Scanner scanner) {
         try {
-            System.out.println("\n--- Read Catch ---");
-            System.out.print("Enter Catch ID: ");
+            System.out.println("\n--- Просмотр данных улова ---");
+            System.out.print("Введите ID улова: ");
             String id = scanner.nextLine();
 
             catchDao.read(id).ifPresentOrElse(
-                    catchEntry -> System.out.println("Catch found: " + catchEntry),
-                    () -> System.out.println("Catch not found.")
+                    catchEntry -> System.out.println("Улов найден: " + catchEntry),
+                    () -> System.out.println("Улов не найден.")
             );
         } catch (Exception e) {
-            System.out.println("Error reading catch: " + e.getMessage());
+            System.out.println("Ошибка при просмотре данных улова: " + e.getMessage());
         }
     }
 
+
     private static void updateCatch(Scanner scanner) {
         try {
-            System.out.println("\n--- Update Catch ---");
-            System.out.print("Enter Catch ID: ");
+            System.out.println("\n--- Обновить данные улова ---");
+            System.out.print("Введите ID улова: ");
             String id = scanner.nextLine();
 
             catchDao.read(id).ifPresentOrElse(catchEntry -> {
                 try {
-                    System.out.print("New Fish Type (current: " + catchEntry.getFishType() + "): ");
+                    System.out.print("Новый вид рыбы (текущий: " + catchEntry.getFishType() + "): ");
                     String fishType = scanner.nextLine();
                     if (!fishType.isEmpty()) catchEntry.setFishType(fishType);
 
-                    System.out.print("New Weight (current: " + catchEntry.getWeight() + "): ");
+                    System.out.print("Новый вес (текущий: " + catchEntry.getWeight() + "): ");
                     double weight = Double.parseDouble(scanner.nextLine());
                     if (weight > 0) catchEntry.setWeight(weight);
 
-                    System.out.print("New Points (current: " + catchEntry.getPoints() + "): ");
+                    System.out.print("Новые очки (текущие: " + catchEntry.getPoints() + "): ");
                     double points = Double.parseDouble(scanner.nextLine());
                     if (points > 0) catchEntry.setPoints(points);
 
-                    System.out.print("New User ID (current: " + catchEntry.getUserId() + "): ");
+                    System.out.print("Новый ID пользователя (текущий: " + catchEntry.getUserId() + "): ");
                     String userId = scanner.nextLine();
                     if (!userId.isEmpty()) catchEntry.setUserId(userId);
 
-                    System.out.print("New Competition ID (current: " + catchEntry.getCompetitionId() + "): ");
+                    System.out.print("Новый ID соревнования (текущий: " + catchEntry.getCompetitionId() + "): ");
                     String competitionId = scanner.nextLine();
                     catchEntry.setCompetitionId(competitionId.isEmpty() ? null : competitionId);
 
                     catchDao.update(catchEntry);
-                    System.out.println("Catch updated successfully!");
+                    System.out.println("Данные улова успешно обновлены!");
                 } catch (Exception e) {
-                    System.out.println("Error updating catch: " + e.getMessage());
+                    System.out.println("Ошибка при обновлении данных улова: " + e.getMessage());
                 }
-            }, () -> System.out.println("Catch not found."));
+            }, () -> System.out.println("Улов не найден."));
         } catch (Exception e) {
-            System.out.println("Error reading catch: " + e.getMessage());
+            System.out.println("Ошибка при чтении улова: " + e.getMessage());
         }
     }
 
+
     private static void deleteCatch(Scanner scanner) {
         try {
-            System.out.println("\n--- Delete Catch ---");
-            System.out.print("Enter Catch ID: ");
+            System.out.println("\n--- Удалить улов ---");
+            System.out.print("Введите ID улова: ");
             String id = scanner.nextLine();
             catchDao.delete(id);
-            System.out.println("Catch deleted successfully!");
+            System.out.println("Улов успешно удален!");
         } catch (Exception e) {
-            System.out.println("Error deleting catch: " + e.getMessage());
+            System.out.println("Ошибка при удалении улова: " + e.getMessage());
         }
     }
 
     private static void getAllCatches() {
         try {
-            System.out.println("\n--- All Catches ---");
+            System.out.println("\n--- Все уловы ---");
             catchDao.getAll().forEach(System.out::println);
         } catch (Exception e) {
-            System.out.println("Error fetching catches: " + e.getMessage());
+            System.out.println("Ошибка при получении списка уловов: " + e.getMessage());
         }
     }
 }
