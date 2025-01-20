@@ -1985,3 +1985,6 @@ Message: Premature end of file.
 2025-01-18 15:49:59 INFO  DataProviderXml:56 - Успешно сохранена запись: User{id=fc771b4b-9125-4dde-ae08-6e427b946f4d, name='Charlie', email='charlie@example.com', phoneNumber='333-444-5555', role='PARTICIPANT', rating=F, competitionId=99ca65d0-6c27-4515-85b2-1d154549761b}
 2025-01-18 15:49:59 INFO  DataProviderXml:40 - Успешно инициализированы данные из XML: 8 записей
 2025-01-18 15:49:59 INFO  DataProviderXml:85 - Запись с ID fc771b4b-9125-4dde-ae08-6e427b946f4d найдена: User{id=fc771b4b-9125-4dde-ae08-6e427b946f4d, name='Charlie', email='charlie@example.com', phoneNumber='333-444-5555', role='PARTICIPANT', rating=F, competitionId=99ca65d0-6c27-4515-85b2-1d154549761b}
+2025-01-20 18:00:18 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-20 18:00:18 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-20 18:00:18 INFO  CatchDao:138 - Получено 2 записей Catch
