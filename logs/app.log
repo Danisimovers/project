@@ -1946,3 +1946,42 @@ Message: Premature end of file.
 2024-12-27 14:59:18 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
 2024-12-27 14:59:18 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
 2024-12-27 14:59:18 INFO  CatchDao:138 - Получено 1 записей Catch
+2025-01-10 15:46:47 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-10 15:46:47 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-10 15:46:47 INFO  CompetitionDao:115 - Получено 1 соревнований
+2025-01-10 15:47:06 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-10 15:47:07 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-10 15:47:07 INFO  CompetitionDao:51 - Соревнование с id 6bf31183-f9dd-49de-b66e-fb3c896051dd найдено
+2025-01-10 15:47:52 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-10 15:47:52 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-10 15:47:52 INFO  CompetitionDao:51 - Соревнование с id 6bf31183-f9dd-49de-b66e-fb3c896051dd найдено
+2025-01-10 15:48:27 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-10 15:48:27 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-10 15:48:27 INFO  CatchDao:138 - Получено 1 записей Catch
+2025-01-18 15:48:41 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-18 15:48:42 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-18 15:48:42 INFO  UserDao:124 - Получено 1 пользователей
+2025-01-18 15:49:22 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-18 15:49:22 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-18 15:49:22 INFO  CatchDao:30 - Запись Catch с id 717ec3cc-2c85-4938-8772-9211ea64a5ec успешно добавлена
+2025-01-18 15:49:26 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-18 15:49:26 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-18 15:49:26 INFO  CatchDao:138 - Получено 2 записей Catch
+2025-01-18 15:49:59 INFO  DataProviderXml:40 - Успешно инициализированы данные из XML: 4 записей
+2025-01-18 15:49:59 INFO  DataProviderXml:56 - Успешно сохранена запись: User{id=f4912271-3ef9-459a-a0d8-15c68e341d43, name='Alice', email='alice@example.com', phoneNumber='111-222-3333', role='PARTICIPANT', rating=C, competitionId=d6c29be4-7e40-49b6-834d-d6dbfcb95082}
+2025-01-18 15:49:59 INFO  DataProviderXml:85 - Запись с ID f4912271-3ef9-459a-a0d8-15c68e341d43 найдена: User{id=f4912271-3ef9-459a-a0d8-15c68e341d43, name='Alice', email='alice@example.com', phoneNumber='111-222-3333', role='PARTICIPANT', rating=C, competitionId=d6c29be4-7e40-49b6-834d-d6dbfcb95082}
+2025-01-18 15:49:59 INFO  DataProviderXml:40 - Успешно инициализированы данные из XML: 5 записей
+2025-01-18 15:49:59 INFO  DataProviderXml:56 - Успешно сохранена запись: User{id=afdc1c55-256b-4f84-87e1-2b6c93e0071e, name='Bob', email='bob@example.com', phoneNumber='555-666-7777', role='PARTICIPANT', rating=D, competitionId=6c9fdc90-ce4b-417c-bea4-571df601f1fb}
+2025-01-18 15:49:59 INFO  DataProviderXml:116 - Запись с ID afdc1c55-256b-4f84-87e1-2b6c93e0071e успешно обновлена.
+2025-01-18 15:49:59 INFO  DataProviderXml:85 - Запись с ID afdc1c55-256b-4f84-87e1-2b6c93e0071e найдена: User{id=afdc1c55-256b-4f84-87e1-2b6c93e0071e, name='Robert', email='robert@example.com', phoneNumber='555-666-7777', role='PARTICIPANT', rating=E, competitionId=0fbcd03c-294e-48da-b2d2-5eff72425f14}
+2025-01-18 15:49:59 INFO  DataProviderXml:40 - Успешно инициализированы данные из XML: 6 записей
+2025-01-18 15:49:59 INFO  DataProviderXml:56 - Успешно сохранена запись: User{id=bde46bc3-bbb8-493c-801e-fe08e0473404, name='Jane Doe', email='jane.doe@example.com', phoneNumber='987-654-3210', role='PARTICIPANT', rating=B, competitionId=3ed80006-3260-473a-ad36-3e1b9c2f38df}
+2025-01-18 15:49:59 INFO  DataProviderXml:72 - Запись с ID bde46bc3-bbb8-493c-801e-fe08e0473404 успешно удалена.
+2025-01-18 15:49:59 WARN  DataProviderXml:89 - Запись с ID bde46bc3-bbb8-493c-801e-fe08e0473404 не найдена.
+2025-01-18 15:49:59 INFO  DataProviderXml:40 - Успешно инициализированы данные из XML: 6 записей
+2025-01-18 15:49:59 INFO  DataProviderXml:56 - Успешно сохранена запись: User{id=b559d73c-c7c2-436a-8724-cea108d814d8, name='John Doe', email='john.doe@example.com', phoneNumber='123-456-7890', role='ORGANIZER', rating=A, competitionId=3305470d-8ef1-4a01-8b9b-6d2ecfcd960e}
+2025-01-18 15:49:59 INFO  DataProviderXml:85 - Запись с ID b559d73c-c7c2-436a-8724-cea108d814d8 найдена: User{id=b559d73c-c7c2-436a-8724-cea108d814d8, name='John Doe', email='john.doe@example.com', phoneNumber='123-456-7890', role='ORGANIZER', rating=A, competitionId=3305470d-8ef1-4a01-8b9b-6d2ecfcd960e}
+2025-01-18 15:49:59 INFO  DataProviderXml:40 - Успешно инициализированы данные из XML: 7 записей
+2025-01-18 15:49:59 INFO  DataProviderXml:56 - Успешно сохранена запись: User{id=fc771b4b-9125-4dde-ae08-6e427b946f4d, name='Charlie', email='charlie@example.com', phoneNumber='333-444-5555', role='PARTICIPANT', rating=F, competitionId=99ca65d0-6c27-4515-85b2-1d154549761b}
+2025-01-18 15:49:59 INFO  DataProviderXml:40 - Успешно инициализированы данные из XML: 8 записей
+2025-01-18 15:49:59 INFO  DataProviderXml:85 - Запись с ID fc771b4b-9125-4dde-ae08-6e427b946f4d найдена: User{id=fc771b4b-9125-4dde-ae08-6e427b946f4d, name='Charlie', email='charlie@example.com', phoneNumber='333-444-5555', role='PARTICIPANT', rating=F, competitionId=99ca65d0-6c27-4515-85b2-1d154549761b}

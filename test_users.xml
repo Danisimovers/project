@@ -36,5 +36,41 @@
          <rating>F</rating>
          <competitionId>c54a3c7e-0b1f-4c68-b63c-b5fe31cf4bea</competitionId>
       </user>
+      <user>
+         <id>f4912271-3ef9-459a-a0d8-15c68e341d43</id>
+         <name>Alice</name>
+         <email>alice@example.com</email>
+         <phoneNumber>111-222-3333</phoneNumber>
+         <role>PARTICIPANT</role>
+         <rating>C</rating>
+         <competitionId>d6c29be4-7e40-49b6-834d-d6dbfcb95082</competitionId>
+      </user>
+      <user>
+         <id>afdc1c55-256b-4f84-87e1-2b6c93e0071e</id>
+         <name>Robert</name>
+         <email>robert@example.com</email>
+         <phoneNumber>555-666-7777</phoneNumber>
+         <role>PARTICIPANT</role>
+         <rating>E</rating>
+         <competitionId>0fbcd03c-294e-48da-b2d2-5eff72425f14</competitionId>
+      </user>
+      <user>
+         <id>b559d73c-c7c2-436a-8724-cea108d814d8</id>
+         <name>John Doe</name>
+         <email>john.doe@example.com</email>
+         <phoneNumber>123-456-7890</phoneNumber>
+         <role>ORGANIZER</role>
+         <rating>A</rating>
+         <competitionId>3305470d-8ef1-4a01-8b9b-6d2ecfcd960e</competitionId>
+      </user>
+      <user>
+         <id>fc771b4b-9125-4dde-ae08-6e427b946f4d</id>
+         <name>Charlie</name>
+         <email>charlie@example.com</email>
+         <phoneNumber>333-444-5555</phoneNumber>
+         <role>PARTICIPANT</role>
+         <rating>F</rating>
+         <competitionId>99ca65d0-6c27-4515-85b2-1d154549761b</competitionId>
+      </user>
    </userList>
 </users>
