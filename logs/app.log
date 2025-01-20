@@ -1988,3 +1988,12 @@ Message: Premature end of file.
 2025-01-20 18:00:18 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
 2025-01-20 18:00:18 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
 2025-01-20 18:00:18 INFO  CatchDao:138 - Получено 2 записей Catch
+2025-01-20 18:17:53 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-20 18:17:53 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-20 18:17:53 INFO  CompetitionDao:115 - Получено 1 соревнований
+2025-01-20 18:20:26 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-20 18:20:26 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-20 18:20:26 INFO  UserDao:124 - Получено 1 пользователей
+2025-01-20 18:22:33 INFO  PsqlDBConnection:25 - Драйвер PostgreSQL успешно загружен
+2025-01-20 18:22:33 INFO  PsqlDBConnection:32 - Успешное подключение к базе данных: jdbc:postgresql://localhost:5432/fish_match
+2025-01-20 18:22:33 INFO  CatchDao:138 - Получено 2 записей Catch
