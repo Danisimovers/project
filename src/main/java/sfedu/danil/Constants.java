@@ -9,7 +9,9 @@ public class Constants {
     public static final String DATABASE_NAME = "historyDB";
     public static final String COLLECTION_NAME = "historyContent";
     public static final String TEST_CSV_FILE = "test_users.csv";
-    public static final String TEST_XML_FILE = "test_users.xml";
+    public static final String USERS_XML_FILE = "users.xml";
+    public static final String COMPETITIONS_XML_FILE = "competitions.xml";
+    public static final String CATCHES_XML_FILE = "catches.xml";
     public static final String DB_PROPERTIES_PATH = "./src/main/resources/database.properties";
 
 

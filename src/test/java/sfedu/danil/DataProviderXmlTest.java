@@ -6,6 +6,7 @@ import sfedu.danil.api.DataProviderXml;
 import sfedu.danil.models.User;
 import sfedu.danil.models.Role;
 import sfedu.danil.models.Competition;
+import sfedu.danil.models.Catch;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,114 +14,186 @@ import java.time.LocalDateTime;
 import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static sfedu.danil.Constants.TEST_XML_FILE;
+import static sfedu.danil.Constants.*;
 
 public class DataProviderXmlTest {
 
-    private DataProviderXml dataProvider;
+    private DataProviderXml<User> userDataProvider;
+    private DataProviderXml<Competition> competitionDataProvider;
+    private DataProviderXml<Catch> catchDataProvider;
 
     @BeforeEach
     void setUp() throws IOException {
-        dataProvider = new DataProviderXml(TEST_XML_FILE);
-        File file = new File(TEST_XML_FILE);
-        if (file.exists()) {
-            file.delete();
+        userDataProvider = new DataProviderXml<>(USERS_XML_FILE, User.class);
+        competitionDataProvider = new DataProviderXml<>(COMPETITIONS_XML_FILE, Competition.class);
+        catchDataProvider = new DataProviderXml<>(CATCHES_XML_FILE, Catch.class);
+
+        File userFile = new File(USERS_XML_FILE);
+        if (userFile.exists()) {
+            userFile.delete();
         }
-        file.createNewFile();
+        userFile.createNewFile();
+
+        File competitionFile = new File(COMPETITIONS_XML_FILE);
+        if (competitionFile.exists()) {
+            competitionFile.delete();
+        }
+        competitionFile.createNewFile();
+
+        File catchFile = new File(CATCHES_XML_FILE);
+        if (catchFile.exists()) {
+            catchFile.delete();
+        }
+        catchFile.createNewFile();
     }
 
     @Test
     void testSaveRecord() {
-
-        Competition competition = new Competition("Coding Challenge", LocalDateTime.now());
+        // Создание соревнования с полными параметрами
+        Competition competition = new Competition("Lesh Tournament", LocalDateTime.of(2024, 12, 11, 18, 30));
         String competitionId = competition.getId();
+        competitionDataProvider.saveRecord(competition);
 
+        // Создание пользователя с полными параметрами
+        User user = new User("Sergey Egorov", "sergey.egorov@example.com", "5555555555", Role.PARTICIPANT, "7.2", competitionId);
+        userDataProvider.saveRecord(user);
 
-        User user = new User("John Doe", "john.doe@example.com", "123-456-7890", Role.ORGANIZER, "A", competitionId);
-        dataProvider.saveRecord(user);
+        // Создание записи о поимке с полными параметрами
+        Catch catchRecord = new Catch("Trofeyny Lesch", 4.5, 8.0, user.getId(), competitionId);
+        catchDataProvider.saveRecord(catchRecord);
 
-
-        User savedUser = dataProvider.getRecordById(user.getId());
-        assertEquals("John Doe", savedUser.getName());
-        assertEquals("john.doe@example.com", savedUser.getEmail());
-        assertEquals("123-456-7890", savedUser.getPhoneNumber());
-        assertEquals("A", savedUser.getRating());
+        // Проверка сохранения пользователя
+        User savedUser = userDataProvider.getRecordById(user.getId());
+        assertEquals("Sergey Egorov", savedUser.getName());
+        assertEquals("sergey.egorov@example.com", savedUser.getEmail());
+        assertEquals("5555555555", savedUser.getPhoneNumber());
+        assertEquals("7.2", savedUser.getRating());
         assertEquals(competitionId, savedUser.getCompetitionId());
+
+        // Проверка сохранения записи о поимке
+        Catch savedCatch = catchDataProvider.getRecordById(catchRecord.getId());
+        assertEquals(user.getId(), savedCatch.getUserId());
+        assertEquals("Trofeyny Lesch", savedCatch.getFishType());
+        assertEquals(4.5, savedCatch.getWeight());
     }
 
     @Test
     void testDeleteRecord() {
-        Competition competition = new Competition("Math Contest", LocalDateTime.now());
+        // Создание соревнования
+        Competition competition = new Competition("Karas Tournament", LocalDateTime.of(2023, 6, 13, 6, 30));
         String competitionId = competition.getId();
+        competitionDataProvider.saveRecord(competition);
 
+        // Создание организатора
+        User user = new User("Ivan Petrov", "ivan.petrov@example.com", "1234567890", Role.ORGANIZER, "2.2", competitionId);
+        userDataProvider.saveRecord(user);
 
-        User user = new User("Jane Doe", "jane.doe@example.com", "987-654-3210", Role.PARTICIPANT, "B", competitionId);
-        dataProvider.saveRecord(user);
+        // Создание записи о поимке
+        Catch catchRecord = new Catch("Sudak", 5.0, 10.0, user.getId(), competitionId);
+        catchDataProvider.saveRecord(catchRecord);
 
+        // Удаление пользователя и записи о поимке
+        userDataProvider.deleteRecord(user.getId());
+        catchDataProvider.deleteRecord(catchRecord.getId());
 
-        dataProvider.deleteRecord(user.getId());
-
-
-        assertThrows(NoSuchElementException.class, () -> dataProvider.getRecordById(user.getId()));
+        // Проверка исключений при попытке получить удаленные записи
+        assertThrows(NoSuchElementException.class, () -> userDataProvider.getRecordById(user.getId()));
+        assertThrows(NoSuchElementException.class, () -> catchDataProvider.getRecordById(catchRecord.getId()));
     }
 
     @Test
     void testGetRecordById() {
-        Competition competition = new Competition("Science Fair", LocalDateTime.now());
+        // Создание соревнования
+        Competition competition = new Competition("Sudak Tournament", LocalDateTime.of(2024, 8, 22, 20, 30));
         String competitionId = competition.getId();
+        competitionDataProvider.saveRecord(competition);
 
+        // Создание участника
+        User user = new User("Oleg Plotvich", "oleg.plotvisch@example.com", "8888888888", Role.PARTICIPANT, "9.9", competitionId);
+        userDataProvider.saveRecord(user);
 
-        User user = new User("Alice", "alice@example.com", "111-222-3333", Role.PARTICIPANT, "C", competitionId);
-        dataProvider.saveRecord(user);
+        // Создание записи о поимке
+        Catch catchRecord = new Catch("Okun", 3.5, 7.0, user.getId(), competitionId);
+        catchDataProvider.saveRecord(catchRecord);
 
-
-        User fetchedUser = dataProvider.getRecordById(user.getId());
+        // Получение и проверка пользователя по ID
+        User fetchedUser = userDataProvider.getRecordById(user.getId());
         assertNotNull(fetchedUser);
         assertEquals(user.getId(), fetchedUser.getId());
         assertEquals(user.getName(), fetchedUser.getName());
         assertEquals(user.getRating(), fetchedUser.getRating());
         assertEquals(user.getCompetitionId(), fetchedUser.getCompetitionId());
+
+        // Получение и проверка записи о поимке по ID
+        Catch fetchedCatch = catchDataProvider.getRecordById(catchRecord.getId());
+        assertNotNull(fetchedCatch);
+        assertEquals(catchRecord.getId(), fetchedCatch.getId());
+        assertEquals(catchRecord.getFishType(), fetchedCatch.getFishType());
     }
 
     @Test
     void testUpdateRecord() {
-        Competition competition = new Competition("Art Contest", LocalDateTime.now());
+        // Создание соревнования
+        Competition competition = new Competition("Som Tournament", LocalDateTime.of(2024, 2, 3, 11, 30));
         String competitionId = competition.getId();
+        competitionDataProvider.saveRecord(competition);
 
+        // Создание организатора
+        User user = new User("Viktor Volkov", "viktor.volkov@example.com", "7777777777", Role.ORGANIZER, "4.9", competitionId);
+        userDataProvider.saveRecord(user);
 
-        User user = new User("Bob", "bob@example.com", "555-666-7777", Role.PARTICIPANT, "D", competitionId);
-        dataProvider.saveRecord(user);
+        // Создание записи о поимке
+        Catch catchRecord = new Catch("Karp", 2.0, 5.0, user.getId(), competitionId);
+        catchDataProvider.saveRecord(catchRecord);
 
-
-        user.setName("Robert");
-        user.setEmail("robert@example.com");
-        user.setRating("E");
-        String newCompetitionId = new Competition("New Art Contest", LocalDateTime.now()).getId(); // Генерация нового competitionId
+        // Обновление данных пользователя и записи о поимке
+        user.setName("Viktor Volkov Updated");
+        user.setEmail("viktor.volkov.updated@example.com");
+        user.setRating("5.0");
+        String newCompetitionId = new Competition("New Som Tournament", LocalDateTime.now()).getId();
         user.setCompetitionId(newCompetitionId);
-        dataProvider.updateRecord(user);
+        userDataProvider.updateRecord(user);
 
+        catchRecord.setFishType("Big Karp");
+        catchDataProvider.updateRecord(catchRecord);
 
-        User updatedUser = dataProvider.getRecordById(user.getId());
-        assertEquals("Robert", updatedUser.getName());
-        assertEquals("robert@example.com", updatedUser.getEmail());
-        assertEquals("E", updatedUser.getRating());
+        // Проверка обновленных данных пользователя
+        User updatedUser = userDataProvider.getRecordById(user.getId());
+        assertEquals("Viktor Volkov Updated", updatedUser.getName());
+        assertEquals("viktor.volkov.updated@example.com", updatedUser.getEmail());
+        assertEquals("5.0", updatedUser.getRating());
         assertEquals(newCompetitionId, updatedUser.getCompetitionId());
+
+        // Проверка обновленных данных записи о поимке
+        Catch updatedCatch = catchDataProvider.getRecordById(catchRecord.getId());
+        assertEquals("Big Karp", updatedCatch.getFishType());
     }
 
     @Test
     void testInitDataSource() {
-        Competition competition = new Competition("Tech Challenge", LocalDateTime.now());
+        // Создание соревнования
+        Competition competition = new Competition("Karas Tournament", LocalDateTime.of(2023, 6, 13, 6, 30));
         String competitionId = competition.getId();
+        competitionDataProvider.saveRecord(competition);
 
+        // Создание организатора
+        User user = new User("Ivan Petrov", "ivan.petrov@example.com", "1234567890", Role.ORGANIZER, "2.2", competitionId);
+        userDataProvider.saveRecord(user);
 
-        User user = new User("Charlie", "charlie@example.com", "333-444-5555", Role.PARTICIPANT, "F", competitionId);
-        dataProvider.saveRecord(user);
+        // Создание записи о поимке
+        Catch catchRecord = new Catch("Sudak", 5.0, 10.0, user.getId(), competitionId);
+        catchDataProvider.saveRecord(catchRecord);
 
+        // Инициализация нового провайдера и получение данных
+        DataProviderXml<User> newUserProvider = new DataProviderXml<>(USERS_XML_FILE, User.class);
+        DataProviderXml<Catch> newCatchProvider = new DataProviderXml<>(CATCHES_XML_FILE, Catch.class);
 
-        DataProviderXml newProvider = new DataProviderXml(TEST_XML_FILE);
-        User fetchedUser = newProvider.getRecordById(user.getId());
-        assertEquals("Charlie", fetchedUser.getName());
-        assertEquals("F", fetchedUser.getRating());
+        User fetchedUser = newUserProvider.getRecordById(user.getId());
+        assertEquals("Ivan Petrov", fetchedUser.getName());
+        assertEquals("2.2", fetchedUser.getRating());
         assertEquals(competitionId, fetchedUser.getCompetitionId());
+
+        Catch fetchedCatch = newCatchProvider.getRecordById(catchRecord.getId());
+        assertEquals("Sudak", fetchedCatch.getFishType());
     }
 }

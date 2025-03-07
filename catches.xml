@@ -1,0 +1,12 @@
+<catches>
+   <catchList class="java.util.ArrayList">
+      <catch>
+         <id>41d67c61-9cdc-463b-8f87-adca8e646d9f</id>
+         <fishType>Trofeyny Lesch</fishType>
+         <weight>4.5</weight>
+         <points>8.0</points>
+         <userId>a174b3a2-7b4e-425d-81af-2ee7c481dfc1</userId>
+         <competitionId>923ed545-40e0-4e7f-ad20-9eb51358c9d1</competitionId>
+      </catch>
+   </catchList>
+</catches>

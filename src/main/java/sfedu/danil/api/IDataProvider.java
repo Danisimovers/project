@@ -7,6 +7,7 @@ public interface IDataProvider<T> {
     void saveRecord(T record);
     void deleteRecord(String  id);
     T getRecordById(String id);
-    void updateRecord(User record);
+    void updateRecord(T record);
+
 }
 

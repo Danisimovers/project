@@ -1,0 +1,13 @@
+<users>
+   <userList class="java.util.ArrayList">
+      <user>
+         <id>a174b3a2-7b4e-425d-81af-2ee7c481dfc1</id>
+         <name>Sergey Egorov</name>
+         <email>sergey.egorov@example.com</email>
+         <phoneNumber>5555555555</phoneNumber>
+         <role>PARTICIPANT</role>
+         <rating>7.2</rating>
+         <competitionId>923ed545-40e0-4e7f-ad20-9eb51358c9d1</competitionId>
+      </user>
+   </userList>
+</users>

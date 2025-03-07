@@ -72,5 +72,14 @@
          <rating>F</rating>
          <competitionId>99ca65d0-6c27-4515-85b2-1d154549761b</competitionId>
       </user>
+      <user>
+         <id>386a51ce-bde8-4c25-b536-2c013f395cc2</id>
+         <name>John Doe</name>
+         <email>john.doe@example.com</email>
+         <phoneNumber>123-456-7890</phoneNumber>
+         <role>ORGANIZER</role>
+         <rating>A</rating>
+         <competitionId>aa61fc54-ce85-4119-b9f8-aa27906c6983</competitionId>
+      </user>
    </userList>
 </users>
