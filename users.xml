@@ -1,13 +1,22 @@
 <users>
    <userList class="java.util.ArrayList">
       <user>
-         <id>a174b3a2-7b4e-425d-81af-2ee7c481dfc1</id>
+         <id>3c123dbb-c267-4b2b-b13f-a616b63be459</id>
          <name>Sergey Egorov</name>
          <email>sergey.egorov@example.com</email>
          <phoneNumber>5555555555</phoneNumber>
          <role>PARTICIPANT</role>
          <rating>7.2</rating>
-         <competitionId>923ed545-40e0-4e7f-ad20-9eb51358c9d1</competitionId>
+         <competitionId>56346b2c-fa3c-4375-ad03-886fc6bb9ee3</competitionId>
+      </user>
+      <user>
+         <id>c730c130-34ec-45b7-8bf9-e389f2736625</id>
+         <name>Sergey Egorov</name>
+         <email>sergey.egorov@example.com</email>
+         <phoneNumber>5555555555</phoneNumber>
+         <role>PARTICIPANT</role>
+         <rating>7.2</rating>
+         <competitionId>49de89eb-fe6a-4ef3-8267-7584c36f40c7</competitionId>
       </user>
    </userList>
 </users>

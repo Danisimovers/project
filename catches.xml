@@ -1,12 +1,20 @@
 <catches>
    <catchList class="java.util.ArrayList">
       <catch>
-         <id>41d67c61-9cdc-463b-8f87-adca8e646d9f</id>
+         <id>95cc31ea-cfbe-4220-b007-a3f8a2d1c94b</id>
          <fishType>Trofeyny Lesch</fishType>
          <weight>4.5</weight>
          <points>8.0</points>
-         <userId>a174b3a2-7b4e-425d-81af-2ee7c481dfc1</userId>
-         <competitionId>923ed545-40e0-4e7f-ad20-9eb51358c9d1</competitionId>
+         <userId>3c123dbb-c267-4b2b-b13f-a616b63be459</userId>
+         <competitionId>56346b2c-fa3c-4375-ad03-886fc6bb9ee3</competitionId>
+      </catch>
+      <catch>
+         <id>8fd7115c-72f2-426f-bb90-f5ed7002a69e</id>
+         <fishType>Trofeyny Lesch</fishType>
+         <weight>4.5</weight>
+         <points>8.0</points>
+         <userId>c730c130-34ec-45b7-8bf9-e389f2736625</userId>
+         <competitionId>49de89eb-fe6a-4ef3-8267-7584c36f40c7</competitionId>
       </catch>
    </catchList>
 </catches>

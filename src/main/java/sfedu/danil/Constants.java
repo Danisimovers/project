@@ -39,4 +39,13 @@ public class Constants {
     public static final String RDCUR_COMP_ID = "SELECT competition_id FROM catches WHERE id = ?";
     public static final String DEL_CATCH_QUERY = "DELETE FROM catches WHERE id = ?";
     public static final String RDALL_CATCH_QUERY = "SELECT * FROM catches";
+
+
+    public static final String HBN_FILE_PATH = "hibernate.cfg.xml";
+    public static final String SQL_DATABASE_SIZE = "SELECT pg_database_size(current_database())";
+    public static final String SQL_TABLE_NAMES = "SELECT table_name FROM information_schema.tables WHERE table_schema='public'";
+    public static final String SQL_COLUMN_TYPES = "SELECT table_name, column_name, data_type FROM information_schema.columns WHERE table_schema='public'";
+    public static final String SQL_USER_LIST = "SELECT usename FROM pg_user";
+
+
 }

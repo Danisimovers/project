@@ -7,14 +7,15 @@ import org.simpleframework.xml.Root;
 import org.simpleframework.xml.convert.Convert;
 import sfedu.danil.LocalDateTimeConverter;
 
+
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
 
 @Getter
 @Setter
 @Root
 public class Competition {
+
     @Element
     private String id;
 

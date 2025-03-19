@@ -22,6 +22,35 @@ public class FishMatch {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
+        // Приветствие и выбор типа данных
+        System.out.println("Добро пожаловать в систему управления рыболовными соревнованиями!");
+        System.out.println("Выберите тип данных, с которым хотите работать:");
+        System.out.println("1. PostgreSQL");
+        System.out.println("2. MongoDB");
+        System.out.println("3. XML (Заглушка)");
+        System.out.println("4. CSV (Заглушка)");
+        System.out.print("Введите номер выбора: ");
+
+        String dataChoice = scanner.nextLine();
+
+        switch (dataChoice) {
+            case "1":
+                System.out.println("Вы выбрали работу с PostgreSQL.");
+                break;
+            case "2":
+                System.out.println("Вы выбрали работу с MongoDB.");
+                break;
+            case "3":
+                System.out.println("XML поддержка пока не реализована.");
+                return; // Завершаем программу, если выбран XML
+            case "4":
+                System.out.println("CSV поддержка пока не реализована.");
+                return; // Завершаем программу, если выбран CSV
+            default:
+                System.out.println("Неверный выбор. Программа завершена.");
+                return; // Завершаем программу при неверном выборе
+        }
+
         while (running) {
             System.out.println("\n=== Главное меню ===");
             System.out.println("1. Управление соревнованиями");
