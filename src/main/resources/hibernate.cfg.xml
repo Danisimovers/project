@@ -9,15 +9,27 @@
         <property name="connection.url">jdbc:postgresql://localhost:5432/fish_match</property>
         <property name="connection.username">postgres</property>
         <property name="connection.password">database</property>
-        <property name="connection.pool_size">1</property>
 
-        <!-- SQL диалект, определяется платформой СУБД-->
+        <!-- SQL диалект -->
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Контекст сессии -->
         <property name="current_session_context_class">thread</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
+        <!-- Управление схемой -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <!-- Вывод в консоль SQL-запросов -->
+        <!-- Оптимизация соединений -->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+
+        <!-- Вывод SQL-запросов в консоль -->
         <property name="show_sql">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Подключение сущностей -->
+        <mapping class="sfedu.danil.models.TestEntity"/>
     </session-factory>
 </hibernate-configuration>

@@ -48,4 +48,8 @@ public class Constants {
     public static final String SQL_USER_LIST = "SELECT usename FROM pg_user";
 
 
+    public static final String DEFAULT_CREATED_BY = "system";
+    public static final String TEST_ENT ="test_entity";
+    public static final String DATE_CREAT = "date_created";
+
 }

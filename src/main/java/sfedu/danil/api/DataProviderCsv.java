@@ -29,7 +29,7 @@ public class DataProviderCsv implements IDataProvider<User> {
             List<String[]> csvData = reader.readAll();
             userList = Optional.ofNullable(userList).orElseGet(ArrayList::new);
             for (String[] row : csvData) {
-                String id = row[0];
+                String id = row[0];// есть цикл, но все равно 0..5
                 String name = row[1];
                 String email = row[2];
                 String phoneNumber = row[3];
@@ -43,6 +43,8 @@ public class DataProviderCsv implements IDataProvider<User> {
 
             }
             logger.info("Успешно инициализированы данные из CSV: {} записей", userList.size());
+
+            //есть catch, но логики никакой нет, кроме написание логов. добавить логику.
         } catch (IOException e) {
             logger.error("Ошибка при чтении CSV", e);
         } catch (IllegalArgumentException e) {
@@ -70,6 +72,7 @@ public class DataProviderCsv implements IDataProvider<User> {
             }
             userList.add(record);
             logger.info("Успешно сохранена запись: {}", record);
+            //да, окей, ты сохранил запись, но будет тогда правильно вернуть хотя true чтобы программа знала о статусе записи
         } catch (IOException e) {
             logger.error("Ошибка при сохранении записи в CSV", e);
         }
@@ -93,6 +96,8 @@ public class DataProviderCsv implements IDataProvider<User> {
                     writer.writeNext(values);
                 }
                 logger.info("Успешно удалена запись с ID: {}", id);
+                //да, окей, ты сохранил запись, но будет тогда правильно вернуть хотя true чтобы программа знала о статусе записи
+
             } catch (IOException e) {
                 logger.error("Ошибка при удалении записи из CSV", e);
             }
@@ -110,7 +115,7 @@ public class DataProviderCsv implements IDataProvider<User> {
             }
         }
         logger.warn("Запись с ID {} не найдена.", id);
-        throw new NoSuchElementException("Запись с ID " + id + " не найдена.");
+        throw new NoSuchElementException("Запись с ID " + id + " не найдена."); //вот так не делается, использовать try catch
     }
 
     @Override
@@ -126,7 +131,7 @@ public class DataProviderCsv implements IDataProvider<User> {
         }
         if (!isUpdated) {
             logger.error("Запись с ID {} не найдена для обновления.", record.getId());
-            throw new NoSuchElementException("Запись с ID " + record.getId() + " не найдена для обновления.");
+            throw new NoSuchElementException("Запись с ID " + record.getId() + " не найдена для обновления.");//вот так не делается, использовать try catch
         }
 
         try (CSVWriter writer = new CSVWriter(new FileWriter(csvFilePath))) {
@@ -143,7 +148,7 @@ public class DataProviderCsv implements IDataProvider<User> {
                 writer.writeNext(values);
             }
             logger.info("Успешно обновлена запись: {}", record);
-        } catch (IOException e) {
+        } catch (IOException e) { // добавить логику
             logger.error("Ошибка при обновлении записи в CSV", e);
         }
     }

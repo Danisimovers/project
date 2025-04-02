@@ -38,7 +38,7 @@ public class MongoDBConnector {
             return document.getObjectId("_id");
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            return null; // null не возвращают
         }
     }
 

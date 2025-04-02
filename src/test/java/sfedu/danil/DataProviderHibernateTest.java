@@ -1,12 +1,8 @@
 package sfedu.danil;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import sfedu.danil.api.DataProviderHibernate;
 
-import java.sql.Connection;
+import org.junit.jupiter.api.Test;
+import sfedu.danil.api.DataProviderHibernate;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
