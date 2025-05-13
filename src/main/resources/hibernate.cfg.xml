@@ -31,5 +31,13 @@
 
         <!-- Подключение сущностей -->
         <mapping class="sfedu.danil.models.TestEntity"/>
+        <mapping class="sfedu.danil.models.mappedSuperclass.Organizer"/>
+        <mapping class="sfedu.danil.models.mappedSuperclass.Participant"/>
+        <mapping class="sfedu.danil.models.mappedSingletable.DayCompetition"/>
+        <mapping class="sfedu.danil.models.mappedSingletable.NightCompetition"/>
+        <mapping class="sfedu.danil.models.mappedJoined.FeederCatch"/>
+        <mapping class="sfedu.danil.models.mappedJoined.SpinningCatch"/>
+        <mapping class="sfedu.danil.models.mappedTableperclass.DayCatch"/>
+        <mapping class="sfedu.danil.models.mappedTableperclass.NightCatch"/>
     </session-factory>
 </hibernate-configuration>

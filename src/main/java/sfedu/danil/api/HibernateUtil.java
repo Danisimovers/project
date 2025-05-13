@@ -20,6 +20,18 @@ public class HibernateUtil {
                 configPath = System.getProperty("hibernate.config", HBN_FILE_PATH);
             }
             Configuration configuration = new Configuration().configure(HBN_FILE_PATH);
+
+            configuration.addAnnotatedClass(sfedu.danil.models.TestEntity.class);
+            configuration.addAnnotatedClass(sfedu.danil.models.mappedSuperclass.Organizer.class);
+            configuration.addAnnotatedClass(sfedu.danil.models.mappedSuperclass.Participant.class);
+            configuration.addAnnotatedClass(sfedu.danil.models.mappedSingletable.DayCompetition.class);
+            configuration.addAnnotatedClass(sfedu.danil.models.mappedSingletable.NightCompetition.class);
+            configuration.addAnnotatedClass(sfedu.danil.models.mappedJoined.FeederCatch.class);
+            configuration.addAnnotatedClass(sfedu.danil.models.mappedJoined.SpinningCatch.class);
+            configuration.addAnnotatedClass(sfedu.danil.models.mappedTableperclass.DayCatch.class);
+            configuration.addAnnotatedClass(sfedu.danil.models.mappedTableperclass.NightCatch.class);
+
+
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties())
                     .build();

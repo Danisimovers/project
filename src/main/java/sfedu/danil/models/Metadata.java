@@ -2,7 +2,11 @@ package sfedu.danil.models;
 
 import jakarta.persistence.Embeddable;
 import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Embeddable
 public class Metadata {
     private String createdBy;

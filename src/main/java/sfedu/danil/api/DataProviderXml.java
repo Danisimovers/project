@@ -27,7 +27,7 @@ public class DataProviderXml<T> implements IDataProvider<T> {
     }
 
     @Override
-    public void initDataSource() {
+    public boolean initDataSource() {
         try {
             File file = new File(xmlFilePath);
             if (!file.exists()) {
@@ -60,10 +60,11 @@ public class DataProviderXml<T> implements IDataProvider<T> {
         } catch (Exception e) {
             logger.error("Ошибка при инициализации данных из XML");
         }
+        return false;
     }
 
     @Override
-    public void saveRecord(T record) {
+    public boolean saveRecord(T record) {
         try {
             dataList.add(record);
             Serializer serializer = new Persister();
@@ -88,10 +89,11 @@ public class DataProviderXml<T> implements IDataProvider<T> {
         } catch (Exception e) {
             logger.error("Ошибка при сохранении записи в XML");
         }
+        return false;
     }
 
     @Override
-    public void deleteRecord(String id) {
+    public boolean deleteRecord(String id) {
         boolean recordRemoved = false;
         for (Iterator<T> iterator = dataList.iterator(); iterator.hasNext(); ) {
             T record = iterator.next();
@@ -137,6 +139,7 @@ public class DataProviderXml<T> implements IDataProvider<T> {
         } else {
             logger.warn("Запись с ID {} не найдена для удаления.", id);
         }
+        return recordRemoved;
     }
 
     @Override
@@ -157,7 +160,7 @@ public class DataProviderXml<T> implements IDataProvider<T> {
     }
 
     @Override
-    public void updateRecord(T record) {
+    public boolean updateRecord(T record) {
         boolean isUpdated = false;
         for (int i = 0; i < dataList.size(); i++) {
             T currentRecord = dataList.get(i);
@@ -206,5 +209,6 @@ public class DataProviderXml<T> implements IDataProvider<T> {
         } catch (Exception e) {
             logger.error("Ошибка при обновлении записи в XML");
         }
+        return isUpdated;
     }
 }

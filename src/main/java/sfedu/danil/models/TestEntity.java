@@ -22,7 +22,6 @@ public class TestEntity {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
     private String description;
 
     @Column(name = DATE_CREAT, nullable = false)
@@ -30,7 +29,7 @@ public class TestEntity {
     private Date dateCreated;
 
     @Column(nullable = false)
-    private Boolean check;
+    private Boolean ischeck;
 
     @Embedded
     private Metadata metadata;
@@ -41,7 +40,7 @@ public class TestEntity {
     public TestEntity(String name, String description, Boolean check) {
         this.name = name;
         this.description = description;
-        this.check = check;
+        this.ischeck = check;
     }
 
     @PrePersist
